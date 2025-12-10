@@ -32,3 +32,14 @@ while user_score >= PLAY_COST:
     user_score -= PLAY_COST
     print(f"Deducting {PLAY_COST} points. Rolling...")
     time.sleep(1)
+    
+    final_reels = []
+
+    for roll_iteration in range(10):
+        clear()
+        reels = [random.randint(0, 9) for _ in range(9)]
+        print("\n  --- SPINNING ---")
+        print(f" |{reels[0]}|{reels[1]}|{reels[2]}| ")
+        print(f" |{reels[3]}|{reels[4]}|{reels[5]}| ")
+        print(f" |{reels[6]}|{reels[7]}|{reels[8]}| ")
+        print("  ----------------")
