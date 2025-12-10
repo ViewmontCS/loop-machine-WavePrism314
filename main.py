@@ -7,5 +7,6 @@ def clear():
 
 user_score = 100
 PLAY_COST = 5
-PAYOUT_WIN_LINE = 20 # Basic payout for a single line
+PAYOUT_WIN_LINE = 20
 QUIT_COMMANDS = ['no', 'n', 'quit', 'exit']
+
