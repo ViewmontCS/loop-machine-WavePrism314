@@ -1,4 +1,5 @@
 import os
+import time
 from random import randint
 from time import sleep
 
@@ -28,3 +29,6 @@ while user_score >= PLAY_COST:
         elif play_again not in ['yes', 'y']:
             print("Invalid input. Assuming 'no'. Cashing out.")
             break
+    user_score -= PLAY_COST
+    print(f"Deducting {PLAY_COST} points. Rolling...")
+    time.sleep(1)
