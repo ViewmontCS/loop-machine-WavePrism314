@@ -44,3 +44,9 @@ while user_score >= PLAY_COST:
         print(f" |{reels[3]}|{reels[4]}|{reels[5]}| ")
         print(f" |{reels[6]}|{reels[7]}|{reels[8]}| ")
         print("  ----------------")
+        
+        if roll_iteration == 9:
+            final_reels = reels
+            print("\n  --- RESULTS ---")
+        
+        time.sleep(0.25)
