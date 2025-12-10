@@ -50,3 +50,16 @@ while user_score >= PLAY_COST:
             print("\n  --- RESULTS ---")
         
         time.sleep(0.25)
+
+  r1, r2, r3, r4, r5, r6, r7, r8, r9 = final_reels
+    winnings = 0
+    win_lines_count = 0
+
+    # Define all possible win conditions (5 ways)
+    win_conditions = [
+        ("Top Row: 1=2=3", r1, r2, r3),
+        ("Mid Row: 4=5=6", r4, r5, r6),
+        ("Bot Row: 7=8=9", r7, r8, r9),
+        ("Diag \\: 1=5=9", r1, r5, r9),
+        ("Diag /: 7=5=3", r7, r5, r3),
+    ]
