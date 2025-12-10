@@ -78,3 +78,9 @@ while user_score >= PLAY_COST:
         print(f"New Score: {user_score}")
     else:
         print("\nNo matching lines this round. Better luck next time!")
+     input("\nPress Enter to continue to the next round...")
+    clear()
+print("\n")
+print("===========================")
+print(f"GAME OVER. Your final score is: {user_score}")
+print("===========================")
