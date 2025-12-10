@@ -52,7 +52,7 @@ while user_score >= PLAY_COST:
         time.sleep(0.25)
 
   r1, r2, r3, r4, r5, r6, r7, r8, r9 = final_reels
-    winnings = 0
+  winnings = 0
     win_lines_count = 0
 
     # Define all possible win conditions (5 ways)
@@ -63,3 +63,18 @@ while user_score >= PLAY_COST:
         ("Diag \\: 1=5=9", r1, r5, r9),
         ("Diag /: 7=5=3", r7, r5, r3),
     ]
+
+  print("\nChecking results...")
+    for description, a, b, c in win_conditions:
+        # Use simple `if` statements so multiple lines can award payouts
+        if a == b == c:
+            print(f" 🎉 WINNER! {description} matched! Awarding {PAYOUT_WIN_LINE} points.")
+            winnings += PAYOUT_WIN_LINE
+            win_lines_count += 1
+    
+    if winnings > 0:
+        user_score += winnings
+        print(f"\nTotal Winnings this round: {winnings}")
+        print(f"New Score: {user_score}")
+    else:
+        print("\nNo matching lines this round. Better luck next time!")
